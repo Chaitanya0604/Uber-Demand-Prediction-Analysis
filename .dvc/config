@@ -1,7 +1,9 @@
 [core]
-    remote = origin
+    remote = myremote
 ['remote "origin"']
     url = https://dagshub.com/Chaitanya0604/Uber-Demand-Prediction-Analysis.dvc
     auth = basic
     user = Chaitanya0604
     password = 87de6ee5b4a909070a422a8a7b71cbaa6f861a9b
+['remote "myremote"']
+    url = s3://uber-demand-prediction-analysis-remote
