@@ -12,6 +12,21 @@ from time import sleep
 
 set_config(transform_output="pandas")
 
+import dagshub
+dagshub.init(repo_owner='chaitanya0604', repo_name='uber-demand-prediction-analysis', mlflow=True)
+
+# set the mlflow tracking uri
+mlflow.set_tracking_uri("https://dagshub.com/chaitanya0604/uber-demand-prediction-analysis.mlflow")
+
+# get model name
+registered_model_name = 'uber_demand_prediction_model'
+stage = "Production"
+model_path = f"models:/{registered_model_name}/{stage}"
+
+# load the latest model from model registry
+model = mlflow.sklearn.load_model(model_path)
+
+
 # set the root path
 root_path = Path(__file__).parent
 # path of the data
