@@ -35,8 +35,8 @@ current_path = Path(__file__)
 # set the root path
 root_path = current_path.parent.parent
 # data_path
-train_data_path = root_path / "data/processed/interim_train.csv"
-test_data_path = root_path / "data/processed/interim_test.csv"
+train_data_path = root_path / "data/processed/dvc_train.csv"
+test_data_path = root_path / "data/processed/dvc_test.csv"
 
 # path for the encoder
 encoder_path = root_path / "models/encoder.joblib"
