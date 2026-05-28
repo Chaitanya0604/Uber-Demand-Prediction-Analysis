@@ -1,5 +1,13 @@
 .DS_Store
 .ipynb_checkpoints/
-data/
+
 /run_information.json
+
+# Ignore all data
+data/*
+
+# Allow external folder
+!data/external/
+
+# Allow plot file
 !data/external/plot_data.csv
