@@ -127,7 +127,6 @@ if __name__ == "__main__":
                 .groupby("region")['total_pickups']
                 .ewm(**ewma_params)
                 .mean()
-                .shift(1)
                 .round()
                 .values
             )
